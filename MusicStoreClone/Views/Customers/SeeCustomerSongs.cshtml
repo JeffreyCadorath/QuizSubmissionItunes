@@ -1,0 +1,24 @@
+﻿@model System.Collections.Generic.ICollection<MusicStoreClone.Controllers.CustomersController.SeeCustomersSongs>
+
+@{
+    ViewBag.Title = "SeeCustomerSongs";
+}
+
+<h2>See Customer Songs</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.DropDownList("CustomerId", "Select")
+    <input type="submit" value="Show" />
+}
+
+@if(Model != null)
+{
+    foreach(var item in Model)
+    {
+        @item.Username  <br/>
+        @item.Song <br />
+    }
+}
+
+

@@ -1,0 +1,16 @@
+﻿@model System.Collections.Generic.ICollection<MusicStoreClone.Controllers.CustomersController.SeeSongs>
+@{
+    ViewBag.Title = "SeeSongsCustomers";
+}
+
+<h2>See Songs Customers</h2>
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        @item.Song <br />
+        @item.Customers <br />
+
+    }
+}
